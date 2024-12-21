@@ -3,18 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scaletta.app</title>
+    <title>Scaletta - App for Music Lovers</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
+        .gradient-bg {
+            background: linear-gradient(135deg, #2c2c2c 0%, #000000 100%);
+        }
+        .iphone-container {
+            perspective: 1000px;
+        }
+        .iphone {
+            transform: rotateY(-30deg) rotateX(10deg);
+            transition: transform 0.3s ease;
+        }
+        .iphone:hover {
+            transform: rotateY(-25deg) rotateX(5deg);
         }
     </style>
 </head>
-<body>
-    <h1>Benvenuto su Scaletta.app</h1>
-    <p>Sito in costruzione</p>
-</body>
-</html>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm shadow-sm z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-black">Scaletta</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-black">Features</a>
+                    <a href="#download" class="text-gray-600 hover:text-black">Download</a>
+                    <a href="#contact" class="text-gray-600 hover:text-black">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-6 py-24">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Left side - Text -->
+                <div class="md:w-1/2 text-white mb-12 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                        Your Music Journey Starts Here
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-purple-100">
+                        Created for DJs, musicians, music lovers and curious people.
+                    </p>
+                    <button class="bg-white text-black px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                        Download Now
+                    </button>
+                </div>
+                
+                <!-- Right side - iPhone -->
+                <div class="md:w-1/2 iphone-container">
+                    <div class="iphone">
+                        <img src="/api/placeholder/320/640" alt="Scaletta App on iPhone" class="max-w-xs mx-auto shadow-2xl rounded-3xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800">
+                Why Choose Scaletta?
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="text-center">
+                    <div class="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Discover Music</h3>
+                    <p class="text-gray-600">Explore new tracks and artists tailored to your taste</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Real-time Updates</h3>
+                    <p class="text-gray-600">Stay updated with the latest music trends and releases</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Connect</h3>
+                    <p class="text-gray-600">Join a community of music enthusiasts</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-gray-800">
+                Ready to Start Your Journey?
+            </h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                Download Scaletta now and join thousands of music lovers in discovering new sounds.
+            </p>
+            <div class="flex justify-center space-x-4">
+                <button class="bg-black text-white px-8 py-3 rounded-lg flex items-center hover:bg-gray-800 transition duration-300">
+                    <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.08-.46-2.07-.48-3.2 0-1.42.63-2.17.53-3.08-.35-4.98-5.05-4.16-12.85 1.53-13.1 1.43.02 2.43.95 3.18.95.73 0 2.12-.96 3.7-.82 1.65.14 2.85.85 3.68 2.12-3.3 2.12-2.77 6.13.27 7.57-.8 1.67-1.83 3.33-3 4.28zM12.03 7.25c-.15-2.23 1.66-4.07 3.68-4.25.25 2.35-1.88 4.1-3.68 4.25z"/>
+                    </svg>
+                    App Store
+                </button>
+                <button class="bg-black text-white px-8 py-3 rounded-lg flex items-center hover:bg-gray-800 transition duration-300">
+                    <svg class="w-8 h-8 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3.5 3.5v17l7-4.5 7 4.5v-17h-14zm14-1.5c.827 0 1.5.673 1.5 1.5v17c0 .827-.673 1.5-1.5 1.5-.368 0-.72-.133-.996-.379l-5.004-3.108-5.004 3.108c-.276.246-.628.379-.996.379-.827 0-1.5-.673-1.5-1.5v-17c0-.827.673-1.5 1.5-1.5h14z"/>
+                    </svg>
+                    Play Store
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-2xl font-bold mb-4">Scaletta</h3>
+                    <p class="text-gray-400 max-w-md">
+                        Your personal music companion. Discover, enjoy, and share your favorite music.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12">
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Company</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">About</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white">Privacy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1
